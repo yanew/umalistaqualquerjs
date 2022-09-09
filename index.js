@@ -67,11 +67,11 @@ const editarItem = async (id) => {
     window.location.replace('index.html');
 }
 
-/*const removerItem = async (id) => {
+const deleteItem = async (id) => {
     await fetch(`http://localhost:3000/item/${id}`,{
         method: 'DELETE'
     });
-}*/
+}
 
 function adicionarItem(){
     criarItem();
@@ -111,12 +111,6 @@ function adicionarItem(){
     imgRemover.height=20;
     botaoRemover.onclick=removerItem
     botaoRemover.appendChild(imgRemover);
-    /*botaoRemover.addEventListener('click', async (e) => {
-        alert('yane')
-        const res =  await fetch(`http://localhost:3000/item/${id}`,{
-            method: 'DELETE'
-        })
-    });*/
     
     painelBotoes.appendChild(botaoEditar);
     painelBotoes.appendChild(botaoRemover);
@@ -153,5 +147,5 @@ function removerItem(event){
     const id = targetId.substr('imgRemover'.length, targetId.length-1);
     let itemTemp = document.querySelector("#div"+id);
     itemTemp.remove();
-    //removerItem(id);
+    deleteItem(id);
 }
