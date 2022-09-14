@@ -18,7 +18,9 @@ const renderItens = async () => {
     let template = '';
     
     itens.forEach(item => {
-        template+= `
+
+        if(item.id_usuario==sessionStorage.idUsu){
+            template+= `
             <div id="div${item.id}" class="item">
                 <div id="painelTexto${item.id}" class="painelTextoItem">
                     <span id="textoItem${item.id}" class="textoItem">${item.conteudo}</span>
@@ -32,6 +34,9 @@ const renderItens = async () => {
                     </a>
                 </div>
             </div> `
+        }
+
+       
     });
 
     cartaoItem.innerHTML = template;

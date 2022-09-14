@@ -22,6 +22,7 @@ const getUsuario = (usuario) => {
 
 
 const conferirUsuario = async () => {
+
     const uri = 'http://localhost:3000/usuario';
     const res = await fetch(uri);
     const usuarios = await res.json();
@@ -29,6 +30,7 @@ const conferirUsuario = async () => {
     //const u = usuarios.filter(getUsuario);
 
     let usu = {
+        id:"",
         login: "",
         senha: "",
         nome: ""
@@ -37,6 +39,7 @@ const conferirUsuario = async () => {
     usuarios.forEach(usuario =>{
         if((usuario.login==form.login.value)&&(usuario.senha==form.senha.value)){
             usu = {
+                id: usuario.id,
                 login: usuario.login,
                 senha: usuario.senha,
                 nome: usuario.nome
@@ -45,6 +48,7 @@ const conferirUsuario = async () => {
     });
 
     if(form.login.value===usu.login&&form.senha.value===usu.senha){
+        guardarIdUsuarioSessionStorage(usu.id);
         //window.location.replace("http://127.0.0.1:5500/index.html");
         location.href = "http://127.0.0.1:5500/index.html";
     }else{
@@ -53,6 +57,10 @@ const conferirUsuario = async () => {
 
 
     return valido;
+}
+
+const guardarIdUsuarioSessionStorage = (idUsuario) => {
+    sessionStorage.idUsu = idUsuario;
 }
 
 const logar = () =>{
