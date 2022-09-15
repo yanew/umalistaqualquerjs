@@ -46,7 +46,8 @@ window.addEventListener('DOMContentLoaded', () => renderItens());
 
 const criarItem = async () => {
     const doc = {
-        conteudo: form.inItem.value
+        conteudo: form.inItem.value,
+        id_usuario: sessionStorage.idUsu
     }
 
     await fetch('http://localhost:3000/item',{
@@ -60,7 +61,8 @@ const criarItem = async () => {
 
 const editarItem = async (id) => {
     const doc = {
-        conteudo: form.inItem.value
+        conteudo: form.inItem.value,
+        id_usuario: sessionStorage.idUsu
     }
 
     await fetch(`http://localhost:3000/item/${id}`,{

@@ -6,19 +6,9 @@
       "id_usuario": 1
     },
     {
-      "id": 3,
-      "conteudo": "Dormi 5h hoje",
-      "id_usuario": 2
-    },
-    {
-      "id": 4,
-      "conteudo": "Fazer post",
-      "id_usuario": 2
-    },
-    {
-      "id": 5,
-      "conteudo": "Estudar json server",
-      "id_usuario": 2
+      "conteudo": "Estudar json server 4",
+      "id_usuario": "2",
+      "id": 5
     },
     {
       "conteudo": "ggg",
@@ -51,36 +41,9 @@
       "id_usuario": 6
     },
     {
-      "conteudo": "d",
+      "conteudo": "yane 3",
+      "id_usuario": "2",
       "id": 12
-    },
-    {
-      "conteudo": "",
-      "id": 13
-    },
-    {
-      "conteudo": "",
-      "id": 14
-    },
-    {
-      "conteudo": "",
-      "id": 15
-    },
-    {
-      "conteudo": "",
-      "id": 16
-    },
-    {
-      "conteudo": "",
-      "id": 17
-    },
-    {
-      "conteudo": "",
-      "id": 18
-    },
-    {
-      "conteudo": "cc",
-      "id": 19
     }
   ],
   "usuario": [
